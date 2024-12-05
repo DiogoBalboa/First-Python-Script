@@ -1,14 +1,17 @@
-print("Please choose from the following options:")
+
 print("1-Read and display names")
 print("2-Add a new name")
 print("3-Exit")
 
 name_input = ""
 names = ""
-user_input = input()
+user_input = ""
+
 
 while user_input != "3":
-
+    print ("Please choose the option you want")
+    user_input = input()
+    
     if user_input == "1":
         print("These are the names inside the list:")
         with open("names.txt", "r") as file:
@@ -25,7 +28,10 @@ while user_input != "3":
 
         break
     
+    elif user_input == "3":
+        break
+    
     else:
         print("Option not valid please choose the correct one")
-    
 
+print("Exiting program...")
